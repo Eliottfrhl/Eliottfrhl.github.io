@@ -1,0 +1,321 @@
+body {
+    background-image: url('background.jpg');
+}
+
+.popup {
+    position: relative;
+    margin-right: 260px;
+    margin-top: 10px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #ffffff;
+    border: 2px solid #042a5d;
+    color: #225394;
+    padding: 9px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    border-radius: 100%;
+    font-family: "Yeseva One";
+    font-weight: bold;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #042a5d;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    font-size: 18px;
+}
+
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.button1 {
+    background-color: #ffffff;
+    color: #225394;
+    padding: 2px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 100%;
+    font-family: "Yeseva One";
+    font-weight: bold;
+    border: 2px solid #042a5d;
+}
+
+#col-1 {
+    position: relative;
+    width: 24%;
+    float: left;
+    height: 100%;
+}
+
+#col-2 {
+    position: relative;
+    width: 76%;
+    float: left;
+    height: 100%;
+    z-index: 1010101010
+}
+
+#col-2-1 {
+    position: relative;
+    width: 50%;
+    float: left;
+    height: 100%;
+    z-index: 1010101010
+}
+
+#col-2-2 {
+    position: relative;
+    width: 50%;
+    float: left;
+    height: 100%;
+    z-index: 1010101010
+}
+
+.Title1 {
+    position: relative;
+    text-align: center;
+    color: #ffe4e1;
+    font-family: "Yeseva One";
+    font-size: 60px;
+}
+
+#nombreReponses {
+    text-align: center;
+}
+
+#imgJoueur {
+    display: block;
+    margin-left: auto;
+    margin-right: 80px;
+    margin-top: 100px;
+    width: 50%;
+    border-radius: 20px;
+}
+
+input[type=text] {
+    width: 60%;
+    padding: 16px;
+    margin-top: 120px;
+    margin-left: 144px;
+    box-sizing: border-box;
+    font-family: "Yeseva One";
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+}
+
+input[type=checkbox] {
+    text-align: right;
+    margin-right: 10px
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+input[type=checkbox] {
+    vertical-align: middle;
+    float: right;
+    margin-top: 50px;
+}
+
+label {
+    display: block;
+    overflow: hidden;
+    width: 120px;
+}
+
+.ImgCheckBoxes {
+    margin-left: 0px;
+    margin-top: 20px;
+    width: 250px;
+    height: 70px;
+}
+
+.Submit {
+    font-family: "Yeseva One";
+    font-size: 30px;
+    font-weight: bold;
+    color: #225394;
+    border-color: #225394;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+#Split {
+    margin-top: 20px;
+    margin-left: 95px;
+}
+
+.select-dropdown,
+.select-dropdown * {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.select-dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: #E6E6E6;
+    border-radius: 4px;
+}
+
+#Year {
+    margin-left: 70px;
+    width: 70px;
+}
+
+.select-dropdown select {
+    font-size: 1rem;
+    font-weight: normal;
+    max-width: 100%;
+    padding: 8px 24px 8px 10px;
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-dropdown select:active,
+.select-dropdown select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.select-dropdown:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    width: 0;
+    height: 0;
+    margin-top: -2px;
+    border-top: 5px solid #aaa;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.gdot {
+    height: 25px;
+    width: 25px;
+    background-color: #3CB371;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.rdot {
+    height: 25px;
+    width: 25px;
+    background-color: #DC143C;
+    border-radius: 50%;
+    display: inline-block;
+}

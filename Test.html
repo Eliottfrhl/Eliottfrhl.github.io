@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/Test.css">
+    <script type="text/javascript" src="script/script1.js"></script>
+    <script type="text/javascript" src="data/Data.js"></script>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="col-1">
+        <span class="button1" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <div class="popup" onclick="Information()">i
+            <span class="popuptext" id="myPopup">Règles du jeu</span>
+        </div>
+        <p>
+            <img class="ImgCheckBoxes" src="data/images/BanniereLFL.png" alt="LFL">
+            <input type="checkbox" id="test1" />
+        </p>
+        <p>
+            <img class="ImgCheckBoxes" src="data/images/BanniereLEC.png" alt="LEC">
+            <input type="checkbox" id="test2" />
+        </p>
+        <p>
+            <img class="ImgCheckBoxes" src="data/images/BanniereLCK.png" alt="LCK">
+            <input type="checkbox" id="test3" />
+        </p>
+        <div id='Year' class="select-dropdown">
+            <select>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+            </select>
+        </div>
+        <div class="select-dropdown">
+            <select>
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+            </select>
+        </div>
+        <input class="Submit" onclick="nouvellePartie()" type="submit" value="Nouvelle Partie">
+    </div>
+
+
+    <div id="col-2">
+        <h1 class="Title1">Guess My Name</h1>
+        <div id="col-2-1">
+            <img id="imgJoueur" src="data/images/incognito.png" alt="Photo Joueur">
+            <input type="text" id="ProInput" name="ProInput" class="ProInput" placeholder="Entrer un pseudo" size="20"
+                onkeyup="ac(this.value)" onkeydown="search(this)" list="datalist">
+        </div>
+        <div id="col-2-2">
+            <table style="width:100%">
+                <tr id="tableHeader">
+                    <th>Nom</th>
+                    <th>Ligue</th>
+                    <th>Equipe</th>
+                    <th>Nationalité</th>
+                    <th>Rôle</th>
+                </tr>
+                <tr id="row1">
+                    <td id="cell1.1" class="cellNom"></td>
+                    <td id="cell1.2" class="cellLigue"></td>
+                    <td id="cell1.3" class="cellEquipe"></td>
+                    <td id="cell1.4" class="cellNat"></td>
+                    <td id="cell1.5" class="cellRole"></td>
+                </tr>
+                <tr id="row2">
+                    <td id="cell2.1" class="cellNom"></td>
+                    <td id="cell2.2" class="cellLigue"></td>
+                    <td id="cell2.3" class="cellEquipe"></td>
+                    <td id="cell2.4" class="cellNat"></td>
+                    <td id="cell2.5" class="cellRole"></td>
+                </tr>
+                <tr id="row3">
+                    <td id="cell3.1" class="cellNom"></td>
+                    <td id="cell3.2" class="cellLigue"></td>
+                    <td id="cell3.3" class="cellEquipe"></td>
+                    <td id="cell3.4" class="cellNat"></td>
+                    <td id="cell3.5" class="cellRole"></td>
+                </tr>
+                <tr id="row4">
+                    <td id="cell4.1" class="cellNom"></td>
+                    <td id="cell4.2" class="cellLigue"></td>
+                    <td id="cell4.3" class="cellEquipe"></td>
+                    <td id="cell4.4" class="cellNat"></td>
+                    <td id="cell4.5" class="cellRole"></td>
+                </tr>
+                <tr id="row5">
+                    <td id="cell5.1" class="cellNom"></td>
+                    <td id="cell5.2" class="cellLigue"></td>
+                    <td id="cell5.3" class="cellEquipe"></td>
+                    <td id="cell5.4" class="cellNat"></td>
+                    <td id="cell5.5" class="cellRole"></td>
+                </tr>
+                <tr id="row6">
+                    <td id="cell6.1" class="cellNom"></td>
+                    <td id="cell6.2" class="cellLigue"></td>
+                    <td id="cell6.3" class="cellEquipe"></td>
+                    <td id="cell6.4" class="cellNat"></td>
+                    <td id="cell6.5" class="cellRole"></td>
+                </tr>
+                <tr id="row7">
+                    <td id="cell7.1" class="cellNom"></td>
+                    <td id="cell7.2" class="cellLigue"></td>
+                    <td id="cell7.3" class="cellEquipe"></td>
+                    <td id="cell7.4" class="cellNat"></td>
+                    <td id="cell7.5" class="cellRole"></td>
+                </tr>
+                <tr id="row8">
+                    <td id="cell8.1" class="cellNom"></td>
+                    <td id="cell8.2" class="cellLigue"></td>
+                    <td id="cell8.3" class="cellEquipe"></td>
+                    <td id="cell8.4" class="cellNat"></td>
+                    <td id="cell8.5" class="cellRole"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
