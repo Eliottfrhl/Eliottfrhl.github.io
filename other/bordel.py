@@ -17,13 +17,13 @@ def ligue(equipe):
 
 
 # Opening JSON file
-f = open('Web\data\players.json', encoding="utf8")
+f = open('data\players.json', encoding="utf8")
 output = {}
 
 data = json.load(f)
 
 for i in data:
-    if i['team'] in Ligues['LFL']:
+    if i['team'] in Ligues['LEC'] or i['team'] in Ligues['LFL']:
         output[i['name']] = [i['name'], i['country'], i['team'],
                              ligue(i['team']), i['role']]
 
