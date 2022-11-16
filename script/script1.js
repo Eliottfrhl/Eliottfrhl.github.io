@@ -61,18 +61,17 @@ function nouvelleReponse(ele) {
         reponse += 1
         document.getElementById(`cell${reponse}.1`).innerHTML = Candidates[ele.value][0];
         if (Candidates[ele.value][1] == ProPlayer[1]) {
-            /*document.getElementById(`cell${reponse}.4`).innerHTML = Candidates[ele.value][1];*/
-            addDot(`cell${reponse}.4`, 'green')
-        } else { /*document.getElementById(`cell${reponse}.4`).innerHTML = "Pas " + Candidates[ele.value][1]*/ addDot(`cell${reponse}.4`, 'red') }
+            addDot(`cell${reponse}.4`, 'green', Candidates[ele.value][1])
+        } else { addDot(`cell${reponse}.4`, 'red', Candidates[ele.value][1]) }
         if (Candidates[ele.value][2] == ProPlayer[2]) {
-            document.getElementById(`cell${reponse}.3`).innerHTML = Candidates[ele.value][2];
-        } else { document.getElementById(`cell${reponse}.3`).innerHTML = "Pas " + Candidates[ele.value][2] }
+            addDot(`cell${reponse}.3`, 'green', Candidates[ele.value][2]);
+        } else { addDot(`cell${reponse}.3`, 'red', Candidates[ele.value][2]) }
         if (Candidates[ele.value][3] == ProPlayer[3]) {
-            document.getElementById(`cell${reponse}.2`).innerHTML = Candidates[ele.value][3];
-        } else { document.getElementById(`cell${reponse}.2`).innerHTML = "Pas " + Candidates[ele.value][3]; }
+            addDot(`cell${reponse}.2`, 'green', Candidates[ele.value][3]);
+        } else { addDot(`cell${reponse}.2`, 'red', Candidates[ele.value][3]); }
         if (Candidates[ele.value][4] == ProPlayer[4]) {
-            document.getElementById(`cell${reponse}.5`).innerHTML = Candidates[ele.value][4];
-        } else { document.getElementById(`cell${reponse}.5`).innerHTML = "Pas " + Candidates[ele.value][4]; }
+            addDot(`cell${reponse}.5`, 'green', Candidates[ele.value][4]);
+        } else { addDot(`cell${reponse}.5`, 'red', Candidates[ele.value][4]); }
     } else {
         alert("Ce joueur n'existe pas")
     } if (reponse == 8) {
@@ -102,8 +101,9 @@ function extract(Data, Input) {
     return Candidates
 }
 
-function addDot(place, color) {
+function addDot(place, color, text) {
     const dot = document.createElement("span")
+    dot.appendChild(document.createTextNode(text))
     if (color == "red") {
         dot.className = "rdot"
     } if (color == "green") {
