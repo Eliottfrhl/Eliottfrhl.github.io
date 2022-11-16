@@ -61,8 +61,9 @@ function nouvelleReponse(ele) {
         reponse += 1
         document.getElementById(`cell${reponse}.1`).innerHTML = Candidates[ele.value][0];
         if (Candidates[ele.value][1] == ProPlayer[1]) {
-            document.getElementById(`cell${reponse}.4`).innerHTML = Candidates[ele.value][1];
-        } else { document.getElementById(`cell${reponse}.4`).innerHTML = "Pas " + Candidates[ele.value][1] }
+            /*document.getElementById(`cell${reponse}.4`).innerHTML = Candidates[ele.value][1];*/
+            addDot(`cell${reponse}.4`, 'green')
+        } else { /*document.getElementById(`cell${reponse}.4`).innerHTML = "Pas " + Candidates[ele.value][1]*/ addDot(`cell${reponse}.4`, 'red') }
         if (Candidates[ele.value][2] == ProPlayer[2]) {
             document.getElementById(`cell${reponse}.3`).innerHTML = Candidates[ele.value][2];
         } else { document.getElementById(`cell${reponse}.3`).innerHTML = "Pas " + Candidates[ele.value][2] }
@@ -83,6 +84,7 @@ function nouvelleReponse(ele) {
 function search(ele) {
     if (event.key === 'Enter') {
         nouvelleReponse(ele);
+        document.getElementById("ProInput").value = "";
     }
 }
 
@@ -100,6 +102,15 @@ function extract(Data, Input) {
     return Candidates
 }
 
+function addDot(place, color) {
+    const dot = document.createElement("span")
+    if (color == "red") {
+        dot.className = "rdot"
+    } if (color == "green") {
+        dot.className = "gdot"
+    }
+    document.getElementById(place).appendChild(dot)
+}
 
 
 const Data = {

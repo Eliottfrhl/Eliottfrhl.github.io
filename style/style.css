@@ -320,3 +320,7 @@ label {
     border-radius: 50%;
     display: inline-block;
 }
+
+td {
+    text-align: "center"
+}
