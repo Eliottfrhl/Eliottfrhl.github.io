@@ -16,6 +16,13 @@ def ligue(equipe):
         return 'LCK'
 
 
+def valid(data):
+    leagueBool = data['team'] in Ligues['LEC'] or data['team'] in Ligues['LFL']
+    roleBool = data['role'] in ['Top Laner',
+                                'Jungler', 'Mid Laner', 'Bot Laner', 'Support']
+    return roleBool and leagueBool
+
+
 # Opening JSON file
 f = open('data\players.json', encoding="utf8")
 output = {}
@@ -23,7 +30,7 @@ output = {}
 data = json.load(f)
 
 for i in data:
-    if i['team'] in Ligues['LEC'] or i['team'] in Ligues['LFL']:
+    if valid(i):
         output[i['name']] = [i['name'], i['country'], i['team'],
                              ligue(i['team']), i['role']]
 
