@@ -15,7 +15,7 @@ body {
     background-color: #ffffff;
     border: 2px solid #042a5d;
     color: #225394;
-    padding: 9px 20px;
+    padding: 9px 1px;
     text-align: center;
     text-decoration: none;
     font-size: 24px;
@@ -331,6 +331,44 @@ label {
     animation-duration: 4s;
 }
 
+.leaguechecked {
+    animation-name: checked;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.leagueunchecked {
+    animation-name: unchecked;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+.leagueButton{
+    border-radius: 50%;
+    font-family: 'Yeseva One';
+    border: 1px;
+    height: 50px;
+    width: 50px;
+}
+
+@keyframes checked {
+    from{
+        background-color:#DC143C;
+    }
+    to {
+        background-color: #3CB371;
+    }
+}
+
+@keyframes unchecked {
+    from{
+        background-color:#3CB371;
+    }
+    to {
+        background-color: #DC143C;
+    }
+}
 
 
 @keyframes example {

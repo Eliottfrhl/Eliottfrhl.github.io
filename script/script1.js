@@ -1,6 +1,7 @@
 let reponse
 let Candidates
 let nbre = 8 - reponse
+let Ligues =['LFL','LEC','LCK']
 
 function sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
@@ -35,13 +36,6 @@ function choosePlayer(Players) {
 function nouvellePartie() {
     reponse = 0
     effacerHistorique()
-    var Ligues = []
-    var LFL = document.querySelector('#test1');
-    if (LFL.checked) { Ligues.push('LFL') }
-    var LEC = document.querySelector('#test2');
-    if (LEC.checked) { Ligues.push('LEC') }
-    var LCK = document.querySelector('#test3');
-    if (LCK.checked) { Ligues.push('LCK') }
     Candidates = extract(Players, Ligues)
     ProPlayer = choosePlayer(Candidates)
     alert("Nouvelle partie !")
@@ -149,9 +143,47 @@ const Players = {
     'Jactroll': ['Jactroll', 'Poland', 'Vitality.Bee', 'LFL', 'Support'], 'Jeskla': ['Jeskla', 'Sweden', 'Vitality.Bee', 'LFL', 'Bot Laner'], 'Diplex': ['Diplex', 'Germany', 'Vitality.Bee', 'LFL', 'Mid Laner'], 'Skeanz': ['Skeanz', 'France', 'Vitality.Bee', 'LFL', 'Jungler'], 'Szygenda': ['Szygenda', 'Denmark', 'Vitality.Bee', 'LFL', 'Top Laner'], 'Hjarnan': ['Hjarnan', 'Sweden', 'Team Vitality', 'LEC', 'Coach'], 'Bo': ['Bo', 'China', 'Team Vitality', 'LEC', 'Jungler'], 'Labrov': ['Labrov', 'Greece', 'Team Vitality', 'LEC', 'Support'], 'Carzzy': ['Carzzy', 'Czech Republic', 'Team Vitality', 'LEC', 'Bot Laner'], 'Perkz': ['Perkz', 'Croatia', 'Team Vitality', 'LEC', 'Mid Laner'], 'Selfmade': ['Selfmade', 'Poland', 'Team Vitality', 'LEC', 'Jungler'], 'Haru': ['Haru', 'South Korea', 'Team Vitality', 'LEC', 'Jungler'], 'Alphari': ['Alphari', 'United Kingdom', 'Team Vitality', 'LEC', 'Top Laner'], 'Doss': ['Doss', 'Denmark', 'LDLC OL', 'LFL', 'Support'], 'Exakick': ['Exakick', 'France', 'LDLC OL', 'LFL', 'Bot Laner'], 'Eika': ['Eika', 'France', 'LDLC OL', 'LFL', 'Mid Laner'], 'Yike': ['Yike', 'Sweden', 'LDLC OL', 'LFL', 'Jungler'], 'Ragner': ['Ragner', 'Turkey', 'LDLC OL', 'LFL', 'Top Laner'], 'Xicor': ['Xicor', 'Tunisia', 'Team Oplon', 'LFL', 'Bot Laner'], 'Nono': ['Nono', 'France', 'Team Oplon', 'LFL', 'Bot Laner'], 'Twiizt': ['Twiizt', 'Sweden', 'Team Oplon', 'LFL', 'Support'], 'Bung (Jakob Gramm)': ['Bung (Jakob Gramm)', 'Austria', 'Team Oplon', 'LFL', 'Bot Laner'], 'Peng (Pengcheng Shen)': ['Peng (Pengcheng Shen)', 'China', 'Team Oplon', 'LFL', 'Mid Laner'], 'Shernfire': ['Shernfire', 'Malaysia', 'Team Oplon', 'LFL', 'Jungler'], 'Darlik': ['Darlik', 'France', 'Team Oplon', 'LFL', 'Top Laner'], 'Veignorem': ['Veignorem', 'France', 'Team GO', 'LFL', 'Support'], 'SMILEY (Ludvig Granquist)': ['SMILEY (Ludvig Granquist)', 'Sweden', 'Team GO', 'LFL', 'Bot Laner'], 'Ronaldo': ['Ronaldo', 'Romania', 'Team GO', 'LFL', 'Mid Laner'], 'Karim kt': ['Karim kt', 'France', 'Team GO', 'LFL', 'Jungler'], 'NuQ': ['NuQ', 'Turkey', 'Team GO', 'LFL', 'Top Laner'], 'LIMIT (Dino Tot)': ['LIMIT (Dino Tot)', 'Croatia', 'Team BDS', 'LEC', 'Support'], 'xMatty': ['xMatty', 'United Kingdom', 'Team BDS', 'LEC', 'Bot Laner'], 'NUCLEARINT': ['NUCLEARINT', 'France', 'Team BDS', 'LEC', 'Mid Laner'], 'Cinkrof': ['Cinkrof', 'Poland', 'Team BDS', 'LEC', 'Jungler'], 'Agresivoo': ['Agresivoo', 'Poland', 'Team BDS', 'LEC', 'Top Laner'], 'Jaylink': ['Jaylink', 'France', 'Team BDS Academy', 'LFL', 'Sub/Bot'], 'Erdote': ['Erdote', 'Poland', 'Team BDS Academy', 'LFL', 'Support'], 'Dreamer Ace': ['Dreamer Ace', 'Austria', 'Team BDS Academy', 'LFL', 'Support'], 'Crownshot': ['Crownshot', 'Slovenia', 'Team BDS Academy', 'LFL', 'Bot Laner'], 'Reeker': ['Reeker', 'Germany', 'Team BDS Academy', 'LFL', 'Mid Laner'], 'Sheo': ['Sheo', 'France', 'Team BDS Academy', 'LFL', 'Jungler'], 'Adam (Adam Maanane)': ['Adam (Adam Maanane)', 'France', 'Team BDS Academy', 'LFL', 'Top Laner'], 'Steeelback': ['Steeelback', 'France', 'Solary', 'LFL', 'Support'], 'Asza': ['Asza', 'Netherlands', 'Solary', 'LFL', 'Bot Laner'], 'Scarlet (Marcel Wiederhofer)': ['Scarlet (Marcel Wiederhofer)', 'Austria', 'Solary', 'LFL', 'Mid Laner'], 'Djoko': ['Djoko', 'France', 'Solary', 'LFL', 'Jungler'], 'Kio': ['Kio', 'Slovakia', 'Solary', 'LFL', 'Top Laner'], 'Bertho': ['Bertho', 'Germany', 'SK Gaming', 'LEC', 'Manager'], 'Treatz': ['Treatz', 'Sweden', 'SK Gaming', 'LEC', 'Support'], 'Jezu': ['Jezu', 'France', 'SK Gaming', 'LEC', 'Bot Laner'], 'Sertuss': ['Sertuss', 'Germany', 'SK Gaming', 'LEC', 'Mid Laner'], 'Gilius': ['Gilius', 'Germany', 'SK Gaming', 'LEC', 'Jungler'], 'JNX': ['JNX', 'Germany', 'SK Gaming', 'LEC', 'Top Laner'], 'Blueknight': ['Blueknight', 'Germany', 'Rogue', 'LEC', 'Analyst'], 'Trymbi': ['Trymbi', 'Spain', 'Rogue', 'LEC', 'Support'], 'Comp': ['Comp', 'Greece', 'Rogue', 'LEC', 'Bot Laner'], 'Larssen': ['Larssen', 'Sweden', 'Rogue', 'LEC', 'Mid Laner'], 'Malrang': ['Malrang', 'South Korea', 'Rogue', 'LEC', 'Jungler'], 'Odoamne': ['Odoamne', 'Romania', 'Rogue', 'LEC', 'Top Laner'], 'Mersa': ['Mersa', 'Greece', 'Misfits Gaming', 'LEC', 'Support'], 'Neon (Matúš Jakubčík)': ['Neon (Matúš Jakubčík)', 'Slovakia', 'Misfits Gaming', 'LEC', 'Bot Laner'], 'Vetheo': ['Vetheo', 'France', 'Misfits Gaming', 'LEC', 'Mid Laner'], 'Zanzarah': ['Zanzarah', 'Russia', 'Misfits Gaming', 'LEC', 'Jungler'], 'Irrelevant': ['Irrelevant', 'Germany', 'Misfits Gaming', 'LEC', 'Top Laner'], 'Diamante': ['Diamante', 'France', 'Misfits Premier', 'LFL', 'Mid Laner'], 'Vander': ['Vander', 'Poland', 'Misfits Premier', 'LFL', 'Support'], 'Woolite': ['Woolite', 'Poland', 'Misfits Premier', 'LFL', 'Bot Laner'], 'Czajek': ['Czajek', 'Poland', 'Misfits Premier', 'LFL', 'Mid Laner'], 'Shlatan': ['Shlatan', 'Poland', 'Misfits Premier', 'LFL', 'Jungler'], 'Kackos': ['Kackos', 'Poland', 'Misfits Premier', 'LFL', 'Top Laner'], 'Herazor': ['Herazor', 'France', 'Mirage Elyandra', 'LFL', 'Mid Laner'], 'Raxxo': ['Raxxo', 'Poland', 'Mirage Elyandra', 'LFL', 'Support'], 'Cody Sun': ['Cody Sun', 'China', 'Mirage Elyandra', 'LFL', 'Bot Laner'], 'FEBIVEN': ['FEBIVEN', 'Netherlands', 'Mirage Elyandra', 'LFL', 'Mid Laner'], 'Memento': ['Memento', 'Sweden', 'Mirage Elyandra', 'LFL', 'Jungler'], 'Badlulu': ['Badlulu', 'France', 'Mirage Elyandra', 'LFL', 'Top Laner'], 'Kaiser': ['Kaiser', 'Germany', 'MAD Lions', 'LEC', 'Support'], 'UNF0RGIVEN': ['UNF0RGIVEN', 'Sweden', 'MAD Lions', 'LEC', 'Bot Laner'], 'Nisqy': ['Nisqy', 'Belgium', 'MAD Lions', 'LEC', 'Mid Laner'], 'Elyoya': ['Elyoya', 'Spain', 'MAD Lions', 'LEC', 'Jungler'], 'Armut': ['Armut', 'Turkey', 'MAD Lions', 'LEC', 'Top Laner'], 'Wao': ['Wao', 'France', 'Karmine Corp', 'LFL', 'Sub/Top'], 'Hantera': ['Hantera', 'France', 'Karmine Corp', 'LFL', 'Support'], 'Rekkles': ['Rekkles', 'Sweden', 'Karmine Corp', 'LFL', 'Bot Laner'], 'Saken': ['Saken', 'France', 'Karmine Corp', 'LFL', 'Mid Laner'], '113': ['113', 'Turkey', 'Karmine Corp', 'LFL', 'Jungler'], 'Cabochard': ['Cabochard', 'France', 'Karmine Corp', 'LFL', 'Top Laner'], 'Mikyx': ['Mikyx', 'Slovenia', 'Excel', 'LEC', 'Support'], 'Patrik': ['Patrik', 'Czech Republic', 'Excel', 'LEC', 'Bot Laner'], 'nukeduck': ['nukeduck', 'Norway', 'Excel', 'LEC', 'Mid Laner'], 'Markoon': ['Markoon', 'Netherlands', 'Excel', 'LEC', 'Jungler'], 'Finn': ['Finn', 'Sweden', 'Excel', 'LEC', 'Top Laner'], 'iCrash': ['iCrash', 'France', 'GameWard', 'LFL', 'Substitute'], 'Kamilius': ['Kamilius', 'Slovakia', 'GameWard', 'LFL', 'Support'], 'Innaxe': ['Innaxe', 'Bulgaria', 'GameWard', 'LFL', 'Bot Laner'], 'Czekolad': ['Czekolad', 'Poland', 'GameWard', 'LFL', 'Mid Laner'], 'Akabane': ['Akabane', 'France', 'GameWard', 'LFL', 'Jungler'], 'Melonik': ['Melonik', 'Poland', 'GameWard', 'LFL', 'Top Laner'], 'Targamas': ['Targamas', 'Belgium', 'G2 Esports', 'LEC', 'Support'], 'Flakked': ['Flakked', 'Spain', 'G2 Esports', 'LEC', 'Bot Laner'], 'caPs': ['caPs', 'Denmark', 'G2 Esports', 'LEC', 'Mid Laner'], 'Jankos': ['Jankos', 'Poland', 'G2 Esports', 'LEC', 'Jungler'], 'Broken Blade': ['Broken Blade', 'Germany', 'G2 Esports', 'LEC', 'Top Laner'], 'beansu': ['beansu', 'Estonia', 'Fnatic', 'LEC', 'Support'], 'Hylissang': ['Hylissang', 'Bulgaria', 'Fnatic', 'LEC', 'Support'], 'Upset': ['Upset', 'Germany', 'Fnatic', 'LEC', 'Bot Laner'], 'Humanoid': ['Humanoid', 'Czech Republic', 'Fnatic', 'LEC', 'Mid Laner'], 'Razork': ['Razork', 'Spain', 'Fnatic', 'LEC', 'Jungler'], 'Wunder': ['Wunder', 'Denmark', 'Fnatic', 'LEC', 'Top Laner'], 'Rhuckz': ['Rhuckz', 'Portugal', 'Fnatic', 'LEC', 'Support'], 'JeongHoon': ['JeongHoon', 'South Korea', 'Astralis', 'LEC', 'Support'], 'Kobbe': ['Kobbe', 'Denmark', 'Astralis', 'LEC', 'Bot Laner'], 'Dajor': ['Dajor', 'Germany', 'Astralis', 'LEC', 'Mid Laner'], 'Xerxe': ['Xerxe', 'Romania', 'Astralis', 'LEC', 'Jungler'], 'Vizicsacsi': ['Vizicsacsi', 'Hungary', 'Astralis', 'LEC', 'Top Laner']
 }
 
-async function test() {
-    addDot("col-1", 'red', '1')
-    await sleep(4000)
-    addDot("col-1", 'red', '2')
+function test() {
+    alert(Ligues)
+}
 
+function toLCK(){
+    const index = Ligues.indexOf('LCK');
+    const input = document.getElementById('LCKinput')
+    if (index > -1) { // only splice array when item is found
+        Ligues.splice(index, 1); // 2nd parameter means remove one item only
+        input.classList.remove('leaguechecked')
+        input.classList.add('leagueunchecked')
+    } else {
+        Ligues.push('LCK')
+        input.classList.remove('leagueunchecked')
+        input.classList.add('leaguechecked')
+    }
+}
+
+function toLEC(){
+    const index = Ligues.indexOf('LEC');
+    const input = document.getElementById('LECinput')
+    if (index > -1) { // only splice array when item is found
+        Ligues.splice(index, 1); // 2nd parameter means remove one item only
+        input.classList.remove('leaguechecked')
+        input.classList.add('leagueunchecked')
+    } else {
+        Ligues.push('LEC')
+        input.classList.remove('leagueunchecked')
+        input.classList.add('leaguechecked')
+    }
+}
+function toLFL(){
+    const index = Ligues.indexOf('LFL');
+    const input = document.getElementById('LFLinput')
+    if (index > -1) { // only splice array when item is found
+        Ligues.splice(index, 1); // 2nd parameter means remove one item only
+        input.classList.remove('leaguechecked')
+        input.classList.add('leagueunchecked')
+    } else {
+        Ligues.push('LFL')
+        input.classList.remove('leagueunchecked')
+        input.classList.add('leaguechecked')
+    }
 }

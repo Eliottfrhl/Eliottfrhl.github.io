@@ -35,7 +35,7 @@
             </span>
 
         </div>
-        <p>
+        <!--<p>
             <img class="ImgCheckBoxes" src="data/images/BanniereLFL.png" alt="LFL">
             <input type="checkbox" id="test1" />
         </p>
@@ -46,7 +46,10 @@
         <p>
             <img class="ImgCheckBoxes" src="data/images/BanniereLCK.png" alt="LCK">
             <input type="checkbox" id="test3" />
-        </p>
+        </p>-->
+        <input type="submit" class='leagueButton' value="LFL" id='LFLinput' style="background-color: #3CB371;" onclick="toLFL()">
+        <input type="submit" class='leagueButton' value="LCK" id='LCKinput' style="background-color: #3CB371;" onclick="toLCK()">
+        <input type="submit" class='leagueButton' value="LEC" id='LECinput' style="background-color: #3CB371;" onclick="toLEC()">
         <!--<div id='Year' class="select-dropdown">
             <select>
                 <option value="2022">2022</option>
@@ -62,8 +65,7 @@
             </select>
         </div>-->
         <input class="Submit" onclick="nouvellePartie()" type="submit" value="Nouvelle Partie">
-        <button onclick="test()"></button>
-
+        <input type="submit" onclick="test()" id="test" value="Values">
     </div>
 
 
