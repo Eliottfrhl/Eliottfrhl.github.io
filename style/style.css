@@ -129,7 +129,7 @@ body {
 #imgJoueur {
     display: block;
     margin-left: auto;
-    margin-right: 80px;
+    margin-right: auto;
     margin-top: 100px;
     width: 50%;
     border-radius: 20px;
@@ -139,7 +139,9 @@ input[type=text] {
     width: 60%;
     padding: 16px;
     margin-top: 120px;
-    margin-left: 144px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     box-sizing: border-box;
     font-family: "Comfortaa";
     font-size: 20px;
@@ -345,11 +347,15 @@ label {
 }
 
 .leagueButton{
-    border-radius: 50%;
+    border-radius: 35%;
     font-family: 'Yeseva One';
     border: 1px;
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 120px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes checked {
@@ -383,4 +389,15 @@ label {
 
 td {
     text-align: center
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.LeagueLogo{
+    width: 100px;
+    height: 90px;
 }

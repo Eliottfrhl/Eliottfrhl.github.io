@@ -48,6 +48,7 @@ function effacerHistorique() {
             document.getElementById(`cell${i}.${j}`).innerHTML = "";
         }
     }
+    document.getElementById("imgJoueur").src ='data/images/Vrac/incognito.png'
 }
 
 /* Add the information when a new answer is given */

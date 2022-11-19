@@ -33,8 +33,8 @@
                     estimation et le joueur que vous devez trouver.<br><br>
                     Vous avez 8 propositions pour trouver le ProPlayer.</p>
             </span>
-
         </div>
+        <br>
         <!--<p>
             <img class="ImgCheckBoxes" src="data/images/BanniereLFL.png" alt="LFL">
             <input type="checkbox" id="test1" />
@@ -47,9 +47,17 @@
             <img class="ImgCheckBoxes" src="data/images/BanniereLCK.png" alt="LCK">
             <input type="checkbox" id="test3" />
         </p>-->
-        <input type="submit" class='leagueButton' value="LFL" id='LFLinput' style="background-color: #3CB371;" onclick="toLFL()">
-        <input type="submit" class='leagueButton' value="LCK" id='LCKinput' style="background-color: #3CB371;" onclick="toLCK()">
-        <input type="submit" class='leagueButton' value="LEC" id='LECinput' style="background-color: #3CB371;" onclick="toLEC()">
+        <div class="leagueButton" id="LFLinput" style="background-color: #3CB371;" onclick="toLFL()">
+            <img src="data/images/Vrac/lfl-logo.png" class="LeagueLogo">
+        </div>
+        <br>
+        <div class="leagueButton" id="LECinput" style="background-color: #3CB371;" onclick="toLEC()">
+            <img src="data/images/Vrac/lec-logo-removebg-preview.png" class="LeagueLogo">
+        </div>
+        <br>
+        <div class="leagueButton" id="LCKinput" style="background-color: #3CB371;" onclick="toLCK()">
+            <img src="data/images/Vrac/LCK-logo.png" class="LeagueLogo">
+        </div>
         <!--<div id='Year' class="select-dropdown">
             <select>
                 <option value="2022">2022</option>
@@ -72,7 +80,7 @@
     <div id="col-2">
         <h1 class="Title1">Guess My Name</h1>
         <div id="col-2-1">
-            <img id="imgJoueur" src="" alt="Photo Joueur">
+            <img id="imgJoueur" src="data\images\Vrac\incognito.png" alt="Photo Joueur" class="center">
             <input type="text" id="ProInput" name="ProInput" class="ProInput" placeholder="Entrer un pseudo" size="20"
                 onkeyup="ac(this.value)" onkeydown="search(this)" list="datalist">
             <datalist id="datalist"></datalist>
