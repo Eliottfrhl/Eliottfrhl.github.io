@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import urllib
 import csv
+from time import sleep
 
 def getPlayers(path):
     output =[]
@@ -21,7 +22,27 @@ def getPlayers(path):
                 })
     return output
         
+def scrapeNat(Players):
+
+    driver = webdriver.Edge()
+    output={}
+    for player in Players:
         
+        pseudo = player['Name']
+        team = player['Team']
+        league = player['League']
+        if pseudo != '':
+            try :
+                driver.get('https://liquipedia.net/leagueoflegends/'+pseudo)
+
+                Player = driver.find_element(By.XPATH,'//*[@id="mw-content-text"]/div/div[2]/div[1]/div[5]/div[2]/a')
+                output[pseudo] = Player.text
+            except :
+                print("Nous n'avons pas pu récupéré la nationalité de :" + pseudo)
+                output[pseudo] = ''
+        sleep(0.5)
+    driver.close()
+    return output
 
 def scrapeImg(Players):
     driver = webdriver.Edge()
@@ -38,12 +59,21 @@ def scrapeImg(Players):
                 urllib.request.urlretrieve(Player.get_attribute('src'), "data/images/"+league+'/'+team+'/'+ pseudo+".png")
             except :
                 print("Nous n'avons pas pu récupéré l'image de :" + pseudo)
-
+        sleep(0.5)
     driver.close()
-    
+   
+"""
+driver=webdriver.Edge()
+driver.get('https://lol.fandom.com/wiki/Hylissang')
 
+Player = driver.find_element(By.XPATH,'//*[@id="mw-content-text"]/div/div[2]/div[1]/div[5]/div[2]/a')
+print(Player.text)
+   
+"""
 path = 'Compo LOL - LFL Spring 2023.csv'
 
 Players = getPlayers(path)
 
-scrapeImg(Players)
+nat = scrapeNat(Players)
+
+print(nat)
