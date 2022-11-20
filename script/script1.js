@@ -57,7 +57,7 @@ async function nouvelleReponse(ele) {
         document.getElementById("imgJoueur").src = "data/images/"+ProPlayer[3]+"/"+ProPlayer[2]+"/"+ProPlayer[0]+'.png';
     } if (Object.keys(Players).includes(ele.value)) {
         reponse += 1
-        document.getElementById(`cell${reponse}.1`).innerHTML = Players[ele.value][0];
+        document.getElementById(`cell${reponse}.1`).innerHTML = Players[ele.value][0].split(' (')[0];
         if (Players[ele.value][3] == ProPlayer[3]) {
             addDot(`cell${reponse}.2`, 'green', Players[ele.value][3]);
         } else { addDot(`cell${reponse}.2`, 'red', Players[ele.value][3]); }

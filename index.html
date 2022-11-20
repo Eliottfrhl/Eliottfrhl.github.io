@@ -35,18 +35,6 @@
             </span>
         </div>
         <br>
-        <!--<p>
-            <img class="ImgCheckBoxes" src="data/images/BanniereLFL.png" alt="LFL">
-            <input type="checkbox" id="test1" />
-        </p>
-        <p>
-            <img class="ImgCheckBoxes" src="data/images/BanniereLEC.png" alt="LEC">
-            <input type="checkbox" id="test2" />
-        </p>
-        <p>
-            <img class="ImgCheckBoxes" src="data/images/BanniereLCK.png" alt="LCK">
-            <input type="checkbox" id="test3" />
-        </p>-->
         <div class="leagueButton" id="LFLinput" style="background-color: #3CB371;" onclick="toLFL()">
             <img src="data/images/Vrac/lfl-logo.png" class="LeagueLogo">
         </div>
@@ -73,14 +61,15 @@
             </select>
         </div>-->
         <input class="Submit" onclick="nouvellePartie()" type="submit" value="Nouvelle Partie">
-        <input type="submit" onclick="test()" id="test" value="Values">
     </div>
 
 
     <div id="col-2">
         <h1 class="Title1">Guess My Name</h1>
         <div id="col-2-1">
-            <img id="imgJoueur" src="data\images\Vrac\incognito.png" alt="Photo Joueur" class="center">
+            <div id="imgContainer">
+                <img id="imgJoueur" src="data\images\Vrac\incognito.png" alt="Photo Joueur" class="center">
+            </div>
             <input type="text" id="ProInput" name="ProInput" class="ProInput" placeholder="Entrer un pseudo" size="20"
                 onkeyup="ac(this.value)" onkeydown="search(this)" list="datalist">
             <datalist id="datalist"></datalist>

@@ -130,8 +130,8 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
-    width: 50%;
+    width: fit-content;
+    height: fit-content;
     border-radius: 20px;
 }
 
@@ -335,13 +335,14 @@ label {
 
 .leaguechecked {
     animation-name: checked;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
+    animation-timing-function: ease;
 }
 
 .leagueunchecked {
     animation-name: unchecked;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 }
@@ -356,6 +357,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 80px;
 }
 
 @keyframes checked {
@@ -392,7 +394,7 @@ td {
 }
 
 .center{
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
 }
@@ -400,4 +402,17 @@ td {
 .LeagueLogo{
     width: 100px;
     height: 90px;
+}
+
+#imgContainer{
+    border-radius: 20px;
+    height: 230px;
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;    
 }
